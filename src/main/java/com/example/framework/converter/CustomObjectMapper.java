@@ -17,8 +17,12 @@ public class CustomObjectMapper extends ObjectMapper {
 		this.setSerializerProvider(serializerProvider);
 	}
 
+	/**
+	 * Null 인 케이스에 맞게 vo 셋팅
+	 * @author sysoft1123c
+	 *
+	 */
 	private static class NullSerializer extends JsonSerializer<Object> {
-
 		@Override
 		public void serialize(Object value, JsonGenerator gen, SerializerProvider serializers)
 				throws IOException, JsonProcessingException {

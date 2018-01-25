@@ -11,4 +11,7 @@
 
 	<!-- PasswordEncoder -->
 	<bean id="bCryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+	
+	<!-- PropertyPlaceHolder -->
+	<context:property-placeholder location="classpath:com/example/property/globals.properties" />
 </beans>

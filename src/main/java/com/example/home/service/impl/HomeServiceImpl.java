@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.example.home.dao.HomeDao;
@@ -14,7 +15,9 @@ import com.example.home.service.HomeService;
 public class HomeServiceImpl implements HomeService {
 	@Autowired
 	private HomeDao homeDao;
-
+	@Autowired
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
+	
 	@Override
 	public Map<String, Object> selectDbList() {
 		Map<String, Object> resultMap = new HashMap<String, Object>();
